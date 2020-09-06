@@ -1,6 +1,102 @@
 <template>
   <div>
     <div class="main-content-wrapper">
+      <h1
+        style="display: flex;flex-direction: column;justify-content: center;text-align: center;"
+      >{{this.allData[0].tarih}} - Günlük Rapor</h1>
+      <div class="content-section-1">
+        <div class="container">
+          <div class="row">
+            <div class="row mtn-25 worldwide-stats">
+              <div class="col-md-6">
+                <div class="tracker-block-style-1">
+                  <div class="tracker-block">
+                    <div class="tracker-block__icon">
+                      <img
+                        src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/corona-icon-red.png"
+                        alt="corona-icon"
+                      />
+                    </div>
+                    <div class="tracker-block__content">
+                      <h4>Bugünkü Test Sayısı</h4>
+                      <h2>
+                        <span class="cases-no infected">
+                          {{
+                          this.allData[0].gunluk_test
+                          }}
+                        </span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tracker-block-style-1">
+                  <div class="tracker-block">
+                    <div class="tracker-block__icon">
+                      <img
+                        src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/corona-icon-red.png"
+                        alt="corona-icon"
+                      />
+                    </div>
+                    <div class="tracker-block__content">
+                      <h4>Bugünkü Hasta Sayısı</h4>
+                      <h2>
+                        <span class="cases-no infected">
+                          {{
+                          this.allData[0].gunluk_vaka
+                          }}
+                        </span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tracker-block-style-1">
+                  <div class="tracker-block">
+                    <div class="tracker-block__icon">
+                      <img
+                        src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/corona-icon-red.png"
+                        alt="corona-icon"
+                      />
+                    </div>
+                    <div class="tracker-block__content">
+                      <h4>Bugünkü Vefat Sayısı</h4>
+                      <h2>
+                        <span class="cases-no infected">{{this.allData[0].gunluk_vefat}}</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tracker-block-style-1">
+                  <div class="tracker-block">
+                    <div class="tracker-block__icon">
+                      <img
+                        src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/corona-icon-green.png"
+                        alt="corona-icon"
+                      />
+                    </div>
+                    <div class="tracker-block__content">
+                      <h4>Bugünkü İyileşen Sayısı</h4>
+                      <h2>
+                        <span class="cases-no infected">{{this.allData[0].gunluk_iyilesen}}</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content-wrapper">
+      <h1
+        style="display: flex;flex-direction: column;justify-content: center;text-align: center;"
+      >Tüm Zamanların Raporu</h1>
       <div class="content-section-1">
         <div class="container">
           <div class="row">
@@ -102,6 +198,126 @@
                 </div>
               </div>
             </div>
+            <div class="col-lg-12 mt-5">
+              <div class="list-view table-responsive" id="list-view">
+                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+                  <div class="dataTables_length" id="DataTables_Table_0_length"></div>
+                  <div id="DataTables_Table_0_filter" class="dataTables_filter"></div>
+                  <table
+                    class="list-view__table display table dataTable no-footer"
+                    id="DataTables_Table_0"
+                    role="grid"
+                    aria-describedby="DataTables_Table_0_info"
+                  >
+                    <thead class="list-view__head">
+                      <tr role="row">
+                        <th
+                          class="sorting_asc"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-sort="ascending"
+                          aria-label="Region: activate to sort column descending"
+                          style="width: 281px;"
+                        >Gün</th>
+                        <th
+                          class="sorting"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="Total Cases: activate to sort column ascending"
+                          style="width: 84px;"
+                        >Toplam Vaka</th>
+                        <th
+                          class="sorting"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="New Cases: activate to sort column ascending"
+                          style="width: 80px;"
+                        >Bugünkü Vaka</th>
+                        <th
+                          class="sorting"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="Total Deaths: activate to sort column ascending"
+                          style="width: 90px;"
+                        >Toplam Vefat</th>
+                        <th
+                          class="sorting"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="Deaths %: activate to sort column ascending"
+                          style="width: 67px;"
+                        >Deaths %</th>
+                        <th
+                          class="sorting"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="New Deaths: activate to sort column ascending"
+                          style="width: 86px;"
+                        >Bugünkü Vefat</th>
+                        <th
+                          class="sorting"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="Total Recovered: activate to sort column ascending"
+                          style="width: 117px;"
+                        >Toplam İyileşen</th>
+                        <th
+                          class="sorting"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="Total Recovered: activate to sort column ascending"
+                          style="width: 117px;"
+                        >Bugünkü İyileşen</th>
+                        <th
+                          class="sorting"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          rowspan="1"
+                          colspan="1"
+                          aria-label="Recovered %: activate to sort column ascending"
+                          style="width: 92px;"
+                        >Recovered %</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="list-view__body">
+                      <tr
+                        class="country-item odd"
+                        role="row"
+                        v-for="item in allData"
+                        :key="item.tarih"
+                      >
+                        <td class="sorting_1">{{item.tarih}}</td>
+                        <td>{{item.toplam_vaka}}</td>
+                        <td>{{item.gunluk_vaka}}</td>
+                        <td>{{item.toplam_vefat}}</td>
+                        <td>{{(parseInt(item.toplam_vefat) / parseInt(item.toplam_vaka) * 100).toFixed(2)}}%</td>
+                        <td>{{item.gunluk_vefat}}</td>
+                        <td>{{item.toplam_iyilesen}}</td>
+                        <td>{{item.gunluk_iyilesen}}</td>
+                        <td>{{(parseInt(item.toplam_iyilesen) / parseInt(item.toplam_vaka) * 100).toFixed(2)}}%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -137,7 +353,10 @@ export default {
   },
   created() {
     axios
-      .get("https://covid19.saglik.gov.tr/covid19api?getir=liste", config)
+      .get(
+        "https://koronacors.herokuapp.com/?https://covid19.saglik.gov.tr/covid19api?getir=liste",
+        config
+      )
       .then(
         (response) => {
           this.allData = response.data;
@@ -148,6 +367,10 @@ export default {
         }
       );
   },
+  /*
+  <div class="row mtn-25 worldwide-stats" style="margin-top: 25px;">
+              
+            </div>*/
 };
 </script>
 

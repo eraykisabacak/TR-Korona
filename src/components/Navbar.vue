@@ -4,15 +4,16 @@
       <div class="row justify-content-between align-items-center">
         <div class="col-lg-4">
           <div class="logo-wrap">
-            <a href="index.html"
-              ><img
+            <a href="index.html" style="text-decoration: none;">
+              <img
                 src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/logo.png"
                 alt="logo"
-            /></a>
+              />
+            </a>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <!--<div class="col-md-6 col-lg-4">
           <div class="last-update-wrap">
             <p class="mb-0">
               Update: <span class="last-update">05.09.2020 at 21:47:23</span>
@@ -34,7 +35,7 @@
               </ul>
             </nav>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </header>
