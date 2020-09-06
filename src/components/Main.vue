@@ -377,7 +377,7 @@ export default {
 <style scoped>
 .main-content-wrapper {
   background-color: #f7f8fc;
-  padding: 90px 0;
+  padding: 25px 0;
 }
 .tracker-block__icon {
   -webkit-flex-basis: 57px;

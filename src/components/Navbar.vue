@@ -19,23 +19,31 @@
               Update: <span class="last-update">05.09.2020 at 21:47:23</span>
             </p>
           </div>
-        </div>
+        </div>-->
 
         <div class="col-md-6 col-lg-4">
           <div class="navbar-wrap">
             <nav class="menubar">
               <ul class="nav">
                 <li>
-                  <a href="index.html" style="margin-right:35px">Dashboard</a>
+                  <a
+                    href="https://github.com/eraykisabacak/TR-Korona"
+                    style="margin-right:35px"
+                  >Github</a>
                 </li>
-                <li><a href="map.html" style="margin-right:35px">Map</a></li>
                 <li>
-                  <a href="badge.html" style="margin-right:35px">Badge</a>
+                  <a
+                    href="https://www.linkedin.com/in/eraykisabacak/"
+                    style="margin-right:35px"
+                  >Linkedin</a>
+                </li>
+                <li>
+                  <a href="https://eraykisabacak.com/" style="margin-right:35px">Website</a>
                 </li>
               </ul>
             </nav>
           </div>
-        </div>-->
+        </div>
       </div>
     </div>
   </header>
