@@ -6,20 +6,31 @@
           <div class="logo-wrap">
             <a href="index.html" style="text-decoration: none;">
               <img
-                src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/logo.png"
+                src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/corona-icon-green.png"
+                alt="logo"
+              />
+              <img
+                src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/corona-icon-green.png"
+                alt="logo"
+              />
+              <img
+                src="https://live.hasthemes.com/html/8/jibanu-preview/jibanu/assets/img/corona-icon-green.png"
                 alt="logo"
               />
             </a>
           </div>
         </div>
 
-        <!--<div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4">
           <div class="last-update-wrap">
             <p class="mb-0">
-              Update: <span class="last-update">05.09.2020 at 21:47:23</span>
+              Bilgiler:
+              <span
+                class="last-update"
+              >Türkiye Cumhuriyeti Sağlık Bakanlığınden Alınmaktadır</span>
             </p>
           </div>
-        </div>-->
+        </div>
 
         <div class="col-md-6 col-lg-4">
           <div class="navbar-wrap">

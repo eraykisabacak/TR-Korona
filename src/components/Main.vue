@@ -3,7 +3,7 @@
     <div class="main-content-wrapper">
       <h1
         style="display: flex;flex-direction: column;justify-content: center;text-align: center;"
-      >{{this.allData[0].tarih}} - Günlük Rapor</h1>
+      >{{ this.allData[0].tarih }} - Günlük Rapor</h1>
       <div class="content-section-1">
         <div class="container">
           <div class="row">
@@ -20,11 +20,7 @@
                     <div class="tracker-block__content">
                       <h4>Bugünkü Test Sayısı</h4>
                       <h2>
-                        <span class="cases-no infected">
-                          {{
-                          this.allData[0].gunluk_test
-                          }}
-                        </span>
+                        <span class="cases-no infected">{{ this.allData[0].gunluk_test }}</span>
                       </h2>
                     </div>
                   </div>
@@ -42,11 +38,7 @@
                     <div class="tracker-block__content">
                       <h4>Bugünkü Hasta Sayısı</h4>
                       <h2>
-                        <span class="cases-no infected">
-                          {{
-                          this.allData[0].gunluk_vaka
-                          }}
-                        </span>
+                        <span class="cases-no infected">{{ this.allData[0].gunluk_vaka }}</span>
                       </h2>
                     </div>
                   </div>
@@ -64,7 +56,11 @@
                     <div class="tracker-block__content">
                       <h4>Bugünkü Vefat Sayısı</h4>
                       <h2>
-                        <span class="cases-no infected">{{this.allData[0].gunluk_vefat}}</span>
+                        <span class="cases-no infected">
+                          {{
+                          this.allData[0].gunluk_vefat
+                          }}
+                        </span>
                       </h2>
                     </div>
                   </div>
@@ -82,7 +78,11 @@
                     <div class="tracker-block__content">
                       <h4>Bugünkü İyileşen Sayısı</h4>
                       <h2>
-                        <span class="cases-no infected">{{this.allData[0].gunluk_iyilesen}}</span>
+                        <span class="cases-no infected">
+                          {{
+                          this.allData[0].gunluk_iyilesen
+                          }}
+                        </span>
                       </h2>
                     </div>
                   </div>
@@ -113,14 +113,14 @@
                     <div class="tracker-block__content">
                       <h4>Toplam Vaka</h4>
                       <h2>
-                        <span class="cases-no infected">
-                          {{
-                          this.allData[0].toplam_vaka
-                          }}
-                        </span>
+                        <span class="cases-no infected">{{ this.allData[0].toplam_vaka }}</span>
                         <span class="new-no">
                           (+
-                          <span class="today_infected">{{this.allData[0].gunluk_vaka}}</span>)
+                          <span class="today_infected">
+                            {{
+                            this.allData[0].gunluk_vaka
+                            }}
+                          </span>)
                         </span>
                       </h2>
                     </div>
@@ -139,14 +139,14 @@
                     <div class="tracker-block__content">
                       <h4>Toplam İyileşen</h4>
                       <h2>
-                        <span class="cases-no infected">
-                          {{
-                          this.allData[0].toplam_iyilesen
-                          }}
-                        </span>
+                        <span class="cases-no infected">{{ this.allData[0].toplam_iyilesen }}</span>
                         <span class="new-no">
                           (+
-                          <span class="today_infected">{{this.allData[0].gunluk_iyilesen}}</span>)
+                          <span class="today_infected">
+                            {{
+                            this.allData[0].gunluk_iyilesen
+                            }}
+                          </span>)
                         </span>
                       </h2>
                     </div>
@@ -165,10 +165,18 @@
                     <div class="tracker-block__content">
                       <h4>Toplam Vefat</h4>
                       <h2>
-                        <span class="cases-no infected">{{this.allData[0].toplam_vefat}}</span>
+                        <span class="cases-no infected">
+                          {{
+                          this.allData[0].toplam_vefat
+                          }}
+                        </span>
                         <span class="new-no">
                           (+
-                          <span class="today_infected">{{this.allData[0].gunluk_vefat}}</span>)
+                          <span class="today_infected">
+                            {{
+                            this.allData[0].gunluk_vefat
+                            }}
+                          </span>)
                         </span>
                       </h2>
                     </div>
@@ -187,10 +195,18 @@
                     <div class="tracker-block__content">
                       <h4>Ağır Hasta</h4>
                       <h2>
-                        <span class="cases-no infected">{{this.allData[0].agir_hasta_sayisi}}</span>
+                        <span class="cases-no infected">
+                          {{
+                          this.allData[0].agir_hasta_sayisi
+                          }}
+                        </span>
                         <span class="new-no">
                           (+
-                          <span class="today_infected">{{this.getAgir()}}</span>)
+                          <span class="today_infected">
+                            {{
+                            this.getAgir()
+                            }}
+                          </span>)
                         </span>
                       </h2>
                     </div>
@@ -256,7 +272,7 @@
                           colspan="1"
                           aria-label="Deaths %: activate to sort column ascending"
                           style="width: 67px;"
-                        >Deaths %</th>
+                        >Vefat Yüzdesi</th>
                         <th
                           class="sorting"
                           tabindex="0"
@@ -292,7 +308,7 @@
                           colspan="1"
                           aria-label="Recovered %: activate to sort column ascending"
                           style="width: 92px;"
-                        >Recovered %</th>
+                        >İyileşme Yüzdesi</th>
                       </tr>
                     </thead>
 
@@ -303,15 +319,23 @@
                         v-for="item in allData"
                         :key="item.tarih"
                       >
-                        <td class="sorting_1">{{item.tarih}}</td>
-                        <td>{{item.toplam_vaka}}</td>
-                        <td>{{item.gunluk_vaka}}</td>
-                        <td>{{item.toplam_vefat}}</td>
-                        <td>{{(parseInt(item.toplam_vefat) / parseInt(item.toplam_vaka) * 100).toFixed(2)}}%</td>
-                        <td>{{item.gunluk_vefat}}</td>
-                        <td>{{item.toplam_iyilesen}}</td>
-                        <td>{{item.gunluk_iyilesen}}</td>
-                        <td>{{(parseInt(item.toplam_iyilesen) / parseInt(item.toplam_vaka) * 100).toFixed(2)}}%</td>
+                        <td class="sorting_1">{{ item.tarih }}</td>
+                        <td>{{ item.toplam_vaka }}</td>
+                        <td>{{ item.gunluk_vaka }}</td>
+                        <td>{{ item.toplam_vefat }}</td>
+                        <td>
+                          {{
+                          getVefatYuzdesi(item.toplam_vefat,item.toplam_vaka)
+                          }}
+                        </td>
+                        <td>{{ item.gunluk_vefat }}</td>
+                        <td>{{ item.toplam_iyilesen }}</td>
+                        <td>{{ item.gunluk_iyilesen }}</td>
+                        <td>
+                          {{
+                          getiyilesmeYuzdesi(item.toplam_iyilesen, item.toplam_vaka)
+                          }}
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -349,6 +373,35 @@ export default {
       );
 
       return todayAgirHasta - yesterdayAgirHasta;
+    },
+    getVefatYuzdesi(toplam_vefat, toplam_vaka) {
+      if (toplam_vefat !== "" && toplam_vaka !== "") {
+        let toplamVefatReplace = toplam_vefat.replace(".", "");
+        let toplamVakaReplace = toplam_vaka.replace(".", "");
+        return (
+          (
+            (parseInt(toplamVefatReplace) / parseInt(toplamVakaReplace)) *
+            100
+          ).toFixed(2) + "%"
+        );
+      } else {
+        return "-";
+      }
+    },
+    getiyilesmeYuzdesi(toplam_iyilesen, toplam_vaka) {
+      if (toplam_iyilesen !== "" && toplam_vaka !== "") {
+        let toplamiyilesenReplace = toplam_iyilesen.replace(".", "");
+        let toplamVakaReplace = toplam_vaka.replace(".", "");
+        return (
+          (
+            (parseInt(toplamiyilesenReplace.replace(".", "")) /
+              parseInt(toplamVakaReplace.replace(".", ""))) *
+            100
+          ).toFixed(2) + "%"
+        );
+      } else {
+        return "-";
+      }
     },
   },
   created() {

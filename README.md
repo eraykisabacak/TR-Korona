@@ -1,6 +1,12 @@
 # trkorona
 
 ## Project setup
+
+![](https://github.com/eraykisabacak/React-E-Commerce-Front-End/blob/master/photo.jpg)
+
+[Demo](https://turkiyekorona.netlify.app/)
+
+## Project setup
 ```
 npm install
 ```
