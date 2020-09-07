@@ -2,7 +2,7 @@
 
 ## Project setup
 
-![](https://github.com/eraykisabacak/React-E-Commerce-Front-End/blob/master/photo.jpg)
+![](https://github.com/eraykisabacak/TR-Korona/blob/master/photo.jpg)
 
 [Demo](https://turkiyekorona.netlify.app/)
 
